@@ -13,6 +13,10 @@ Handles some of the following endpoints of the API:
 - [ ] Fine-tunes
 - [ ] Moderations
 
+# ⚙️ Usage
+
+The API key should be provided as an enivormental variable using `OPENAI_API_KEY`.
+
 # 📚 Examples
 
 Simple example to complete a prompt string.
