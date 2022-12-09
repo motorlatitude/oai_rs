@@ -1,7 +1,7 @@
 [package]
 name = "oai_rs"
 description = "An async rust library that's a wrapper for the OpenAI API"
-license = "GNU v3.0"
+license = "GPL-3.0"
 license-file = "./LICENSE"
 version = "0.1.0"
 edition = "2021"
