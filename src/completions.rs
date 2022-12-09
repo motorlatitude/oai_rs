@@ -8,10 +8,10 @@ use std::collections::HashMap;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CompletionChoice {
-    text: String,
-    index: i32,
-    logprobs: Option<i32>,
-    finish_reason: String
+    pub text: String,
+    pub index: i32,
+    pub logprobs: Option<i32>,
+    pub finish_reason: String
 }
 
 #[derive(Debug, Serialize, Deserialize)]

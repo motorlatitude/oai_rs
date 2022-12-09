@@ -6,7 +6,7 @@ use std::collections::HashMap;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ImageURL {
-    url: String
+    pub url: String
 }
 
 #[derive(Debug, Serialize, Deserialize)]

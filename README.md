@@ -21,7 +21,7 @@ Handles some of the following endpoints of the API:
 
 ## 🚀 Getting Started
 
-Simply add `oai_rs=0.1.1` to your cargo.toml file. The API key should be provided as an enivormental variable using `OPENAI_API_KEY`.
+Simply add `oai_rs = "0.1.2"` to your cargo.toml file. The API key should be provided as an enivormental variable using `OPENAI_API_KEY`.
 
 ## 📚 Examples
 
