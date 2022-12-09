@@ -1,11 +1,17 @@
 [package]
 name = "oai_rs"
 description = "An async rust library that's a wrapper for the OpenAI API"
+homepage = "https://github.com/motorlatitude/oai_rs"
+repository = "https://github.com/motorlatitude/oai_rs"
 license = "GPL-3.0"
 license-file = "./LICENSE"
-version = "0.1.0"
+readme = "./README.md"
+version = "0.1.1"
 edition = "2021"
-
+documentation = "https://docs.rs/oai_rs/"
+keywords = ["OpenAI", "AI", "API", "async"]
+categories = ["asynchronous", "multimedia::images"]
+publish = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
