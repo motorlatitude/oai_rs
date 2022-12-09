@@ -1,4 +1,4 @@
-[![OAI_RS](https://github.com/motorlatitude/oai_rs/main/.github/OAI_RS_Header.png?raw=true)]()
+[![OAI_RS](https://raw.githubusercontent.com/motorlatitude/oai_rs/main/.github/OAI_RS_Header.png?raw=true)]()
 
 An async rust library that's a wrapper for the OpenAI API.
 
