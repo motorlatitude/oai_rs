@@ -155,18 +155,3 @@ pub async fn get(model_name: String) -> Result<Model, StatusCode> {
         Err(e) => Err(e),
     }
 }
-
-
-#[cfg(test)]
-mod tests {
-    use crate::models;
-
-    #[tokio::test]
-    async fn get_model() {
-        let model = models::get(String::from("text-davinci-003")).await;
-
-        println!("{:?}", model);
-
-        assert_eq!(1, 1)
-    }
-}

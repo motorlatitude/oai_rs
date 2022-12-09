@@ -245,23 +245,3 @@ impl<'a> Parameters<'a> {
         }
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use crate::{completions, models};
-
-    #[tokio::test]
-    async fn completions_builder() {
-        let completions = completions::build(models::CompletionModels::TEXT_DAVINCI_003)
-            .prompt("What happened in 2020?")
-            .user("oai-rs")
-            .max_tokens(32)
-            .complete()
-            .await
-            .expect("Error Getting Response");
-
-        println!("{:?}", completions);
-
-        assert_eq!(1, 1)
-    }
-}

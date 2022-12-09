@@ -118,20 +118,3 @@ impl<'a> Parameters<'a> {
         }
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use crate::{edits, models};
-
-    #[tokio::test]
-    async fn edits_builder() {
-        let edits = edits::build(models::EditModels::TEXT_DAVINCI_EDIT_001, String::from("Fix the spelling and grammar mistakes"))
-         .input("Im bad at splling, hopefuly AI can fox this.")
-         .edit()
-         .await
-         .expect("Error Getting Response");
-        println!("{:?}", edits);
-
-        assert_eq!(1, 1)
-    }
-}

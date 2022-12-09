@@ -260,22 +260,3 @@ impl<'a> VariationParameters<'a> {
         }
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use crate::images;
-
-    #[tokio::test]
-    async fn images_builder() {
-        let images = images::build()
-        .generate(String::from("Modern SVG stroke gradient CPU in the shape of a brain icon"))
-        .n(&3)
-        .size("256x256")
-        .done()
-        .await;
-
-        println!("{:?}", images);
-
-        assert_eq!(1, 1)
-    }
-}
