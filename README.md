@@ -5,15 +5,17 @@ An async rust library that's a wrapper for the OpenAI API.
 # 💫 Features
 Handles some of the following endpoints of the API:
 
-    - [x] Models
-    - [x] Edits
-    - [x] Images
-    - [ ] Embeddings
-    - [ ] Files
-    - [ ] Fine-tunes
-    - [ ] Moderations
+- [x] Models
+- [x] Edits
+- [x] Images
+- [ ] Embeddings
+- [ ] Files
+- [ ] Fine-tunes
+- [ ] Moderations
 
-# 📔 Examples
+# 📚 Examples
+
+Simple example to complete a prompt string.
 
 ```rust
 use oai_rs::{completions, models};
