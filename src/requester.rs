@@ -84,7 +84,9 @@ where
 pub enum ImageRequestType {
     #[strum(serialize = "generations")]
     Generations,
+    #[strum(serialize = "edits")]
     Edits,
+    #[strum(serialize = "variations")]
     Variations
 }
 

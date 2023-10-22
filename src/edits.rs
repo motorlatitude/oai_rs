@@ -1,15 +1,15 @@
-use crate::requester;
 use crate::models::EditModels;
+use crate::requester;
 use crate::usage::Usage;
 use reqwest::StatusCode;
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 use std::collections::HashMap;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EditChoice {
-    text: String,
-    index: i32,
+    pub text: String,
+    pub index: i32,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -17,14 +17,14 @@ pub struct Edit {
     pub object: String,
     pub created: u64,
     pub choices: Vec<EditChoice>,
-    pub usage: Usage
+    pub usage: Usage,
 }
 
 /// Available parameters that can be sent with an edit request
 pub struct Parameters<'a> {
     model: EditModels,
     instruction: String,
-    query: Vec<(&'a str, Value)>
+    query: Vec<(&'a str, Value)>,
 }
 
 /// Function to create a edit request
@@ -51,12 +51,11 @@ pub fn build<'a>(model: EditModels, instruction: String) -> Parameters<'a> {
     Parameters {
         model,
         instruction,
-        query: Vec::new()
+        query: Vec::new(),
     }
 }
 
 impl<'a> Parameters<'a> {
-
     /// The text to generate edits for, encoded as a string.
     ///
     /// [OpenAI Reference](https://beta.openai.com/docs/api-reference/edits/create#edits/create-input)
@@ -102,7 +101,6 @@ impl<'a> Parameters<'a> {
 
     /// Complete the request and send
     pub async fn edit(self) -> Result<Edit, StatusCode> {
-
         let mut map = HashMap::new();
         map.insert("model", json!(self.model.as_string()));
         map.insert("instruction", json!(self.instruction));
